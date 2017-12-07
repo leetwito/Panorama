@@ -14,7 +14,7 @@ def interpolate(img):
 
 
 
-def stitch(left_image, right_image, M):
+def warp_and_stitch(left_image, right_image, M):
 
     leftH,leftW = left_image.shape
     rightH, rightW = right_image.shape

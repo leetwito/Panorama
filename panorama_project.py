@@ -12,8 +12,9 @@ import match
 
 # Part C (Lee and Daniel):
 import findHomography
+
 # Part D (Ira and Ofer):
-import stitch
+import warpstitch as ws
 
 def main():
     src_image_path = "src.jpg"
@@ -39,7 +40,7 @@ def main():
     H=findHomography.best_H(matches_arr)
     print H
     # Part D
-    panorama = stitch(img1,img2,H)
+    panorama = ws.warp_and_stitch(img1,img2,H)
     
     plt.imshow(panorama, cmap='gray')
     plt.show()
